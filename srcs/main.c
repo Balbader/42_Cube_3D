@@ -16,5 +16,6 @@ int	main(int ac, char **av)
 {
 	(void)ac;
 	(void)av;
+	printf("Hello from main.c!\n");
 	return (0);
 }
