@@ -14,12 +14,18 @@
 # define CUB3D_H
 
 # include "define.h"
+# include "enum.h"
 # include "structures.h"
+# include "mlx.h"
 
 # include <unistd.h>
 # include <stdio.h>
 # include <math.h>
 # include <stdlib.h>
 # include <stdbool.h>
+# include <fcntl.h>
+# include <math.h>
+# include <X11/X.h>
+
 
 #endif	
