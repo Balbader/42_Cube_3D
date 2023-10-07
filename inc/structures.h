@@ -13,48 +13,48 @@
 #ifndef STRUCTURES_H
 # define STRUCTURES_H
 
-typedef int			t_bool;
+typedef int	t_bool;
 
-typedef enum		e_side
+typedef enum e_side
 {
 	N,
 	W,
 	S,
 	E
-}					t_side;
+}			t_side;
 
-typedef struct		s_mlx
+typedef struct s_mlx
 {
 	void			*ptr;
 	void			*win;
-}					t_mlx;
+}			t_mlx;
 
-typedef struct		s_dda
+typedef struct s_dda
 {
 	double	side_dist[2];
 	double	delta_dist[2];
 	double	wall_dist;
 	int		map_pos[2];
 	int		step[2];
-}					t_dda;
+}			t_dda;
 
-typedef struct		s_texdata
+typedef struct s_texdata
 {
 	double	wall_dist;
 	double	wall_x;
 	int		line_height;
 	t_side	side;
-}					t_texdata;
+}			t_texdata;
 
-typedef struct		s_spritedata
+typedef struct s_spritedata
 {
 	double	transform[2];
 	int		sprite_x;
 	int		sprite_size;
 	int		index;
-}					t_spritedata;
+}			t_spritedata;
 
-typedef struct		s_ctrls
+typedef struct s_ctrls
 {
 	t_bool	w;
 	t_bool	a;
@@ -62,9 +62,9 @@ typedef struct		s_ctrls
 	t_bool	d;
 	t_bool	left;
 	t_bool	right;
-}					t_ctrls;
+}			t_ctrls;
 
-typedef struct		s_img
+typedef struct s_img
 {
 	char	*filename;
 	void	*ptr;
@@ -74,16 +74,16 @@ typedef struct		s_img
 	int		bpp;
 	int		size_line;
 	t_bool	endian;
-}					t_img;
+}			t_img;
 
-typedef struct		s_sprite
+typedef struct s_sprite
 {
 	int		pos[2];
 	double	distance;
 	t_img	texture;
-}					t_sprite;
+}			t_sprite;
 
-typedef struct		s_world
+typedef struct s_world
 {
 	t_mlx			mlx;
 	int				fd;
@@ -111,6 +111,6 @@ typedef struct		s_world
 	t_side			cam_dir;
 	t_bool			save;
 	int				fd_save;
-}					t_world;
+}			t_world;
 
 #endif	
