@@ -18,7 +18,7 @@ void	ft_draw(t_world *world)
 	ft_draw_sprites(world);
 	if (world->save)
 	{
-		ft_flip_pixels(world);
+		ft_flip_pix(world);
 		write(world->fd_save, world->screen.data, world->nb_pixels);
 		close(world->fd_save);
 	}
