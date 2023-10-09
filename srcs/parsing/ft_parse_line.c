@@ -34,5 +34,5 @@ void	ft_parse_line(t_world *world, char *line, int line_nb, int res)
 	else if (*ptr == 'S')
 		ft_parse_texture(world, ptr + 1, 4, line_nb);
 	else
-		ft_parse_other_line(world, line, line_nb, res);
+		ft_parse_next_line(world, line, line_nb, res);
 }
