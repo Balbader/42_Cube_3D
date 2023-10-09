@@ -14,7 +14,7 @@
 
 int	ft_atoi(char *str)
 {
-	int		nb;
+	int	nb;
 
 	nb = 0;
 	while (*str <= ' ')
