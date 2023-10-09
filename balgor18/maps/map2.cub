@@ -1,8 +1,8 @@
 
-NO ./textures_solong/Kyubie42.xpm
-SO ./textures_solong/Sakura42.xpm
-WE ./textures_solong/Tori42.xpm
-EA ./textures_solong/Tree42.xpm
+NO ./textures/Kyubie42.xpm
+SO ./textures/Sakura42.xpm
+WE ./textures/Tori42.xpm
+EA ./textures/Tree42.xpm
 
 F 220,100,0
 C 225,30,0
