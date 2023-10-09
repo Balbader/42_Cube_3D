@@ -42,16 +42,14 @@ FLAGS =		-Wall -Werror -Wextra
 
 INC =		/usr/local/include
 
-LIB =		/usr/local/lib
-
-GFX_FLAGS =	-framework OpenGL -framework AppKit
-
-LIB_FLAGS =	-lX11 -lXext -lm -lbsd -lmlx
+MLX					:=	minilibx-linux/libmlx.a
+INC_MLX				:=	./minilibx-linux/
+LIB					:=	-L ./minilibx-linux -lmlx -lXext -lX11 -lm
 
 all: 		$(NAME)
 
 $(NAME):
-			clang $(FLAGS) -I $(INC) -g -L $(LIB) $(SRCS) -o $(NAME) $(LIB_FLAGS)
+			clang $(FLAGS) -I $(INC) -g $(SRCS) -o $(NAME) $(LIB)
 
 clean:
 			/bin/rm -rf $(SRCS:.c=.o) $(BONUS:.c=.o)

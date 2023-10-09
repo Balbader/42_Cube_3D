@@ -4,8 +4,12 @@ INC=-I./inc
 FLAGSD=-Wall -Wextra -Werror -fsanitize=address
 FLAGS=-Wall -Wextra -Werror
 
-LIB_LINUX=-L./libft -lft -I/usr/local/include -L/usr/local/lib -lmlx -L/usr/include -lm -lbsd -lX11 -lXext
-LIB=$(LIB_LINUX)
+MLX					:=	minilibx-linux/libmlx.a
+INC_MLX				:=	./minilibx-linux/
+LIB					:=	-L ./minilibx-linux -lmlx -lXext -lX11 -lm
+
+# LIB_LINUX=-L./libft -lft -I/usr/local/include -L/usr/local/lib -lmlx -L/usr/include -lm -lbsd -lX11 -lXext
+# LIB=$(LIB_LINUX)
 
 SRC_PATH=./src/
 PARSING=parsing/check_args.c \
@@ -52,7 +56,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C libft
-	@gcc $(FLAGSD) $(INC) -o $(NAME) $(OBJ) $(LIB)
+	@gcc $(FLAGS) -o $(NAME) $(OBJ) $(LIB)
 
 %.o: %.c
 	@gcc $(FLAGS) $(INC) -o $@ -c $<

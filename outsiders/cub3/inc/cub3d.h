@@ -15,9 +15,10 @@
 
 # include "includes.h"
 # include "libft.h"
+# include "get_next_line.h"
 # include "structures.h"
 # include "constant.h"
-# include <mlx.h>
+# include "../minilibx-linux/mlx.h"
 
 /*
 ** ===== Prototypes =====
