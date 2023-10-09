@@ -20,12 +20,11 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <math.h>
-# include <sys/types.h>
-# include <sys/stat.h>
 # include <stdlib.h>
 # include <stdbool.h>
 # include <fcntl.h>
-# include <math.h>
+# include <sys/types.h>
+# include <sys/stat.h>
 # include <X11/X.h>
 
 /***************************************************************** controller */
@@ -93,10 +92,15 @@ int		ft_atoi(char *str);
 int		ft_char_in_str(char c, char *str);
 int		ft_get_screen_pixel(t_img screen, int i, int j);
 int		ft_get_tex_color(t_img tex, double u, double v);
+int		ft_indexof(char *str, char c);
+int		ft_strlen(char *str);
 int		ft_strcmp(char *s1, char *s2);
+int		get_next_line(int fd, char **line);
+char	*ft_strdup(char *str);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_substr(char *str, int start, int len);
 char	*ft_remove_spaces(char *str);
 char	*ft_trim(char *str);
-char	*get_next_line(int fd);
 char	*strjoin(char *line, char *buffer);
 bool	ft_manage_buffer(char *buffer);
 void	ft_flip_pix(t_world *world);
