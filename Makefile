@@ -13,12 +13,32 @@
 ##################################
 #   	      NAME 				 #
 ##################################
-NAME			:=	cub3d
+NAME				:=	cub3d
 
 
 ##################################
 #    	    SRCS FILES			 #
 ##################################
+CONTROLLER_DIR		:=	controller/
+CONTROLLER_FILES	:=	\
+						ft_pressed_key.c \
+						ft_quit.c \
+						ft_released_key.c
+CONTROLLER			:=	$(addprefix $(CONTROLLER_DIR), $(CONTROLLER_FILES))
+
+DRAW_DIR			:=	draw/
+DRAW_FILES			:=	\
+						ft_draw.c \
+						ft_draw_walls.c
+DRAW				:=	$(addprefix $(DRAW_DIR), $(DRAW_FILES))
+
+ERR_CHECK_DIR		:=	err_check/
+ERR_CHECK_FILES		:=	\
+						ft_check_cell.c \
+						ft_check_map.c \
+						ft_check_parsing.c \
+						ft_check_world.c
+ERR_CHECK			:=	$(addprefix $(ERR_CHECK_DIR), $(ERR_CHECK_FILES))
 
 
 ##################################
