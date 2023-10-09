@@ -29,7 +29,7 @@ void	ft_parse_color(t_world *world, char *ptr, char c, int line_nb)
 			ptr++;
 		if (*ptr > '9' || *ptr < '0')
 			ft_check_parsing(world, "Color is invalid", line_nb);
-		color = (color << 8) + ft_atoi_easy(ptr);
+		color = (color << 8) + ft_atoi(ptr);
 		while (*ptr >= '0' && *ptr <= '9')
 			ptr++;
 		(*ptr == ',' || i == 3) ? ptr++
