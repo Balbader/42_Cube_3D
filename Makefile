@@ -40,6 +40,82 @@ ERR_CHECK_FILES		:=	\
 						ft_check_world.c
 ERR_CHECK			:=	$(addprefix $(ERR_CHECK_DIR), $(ERR_CHECK_FILES))
 
+INIT_DIR			:=	init/
+INIT_FILES			:=	\
+						ft_init_camera.c \
+						ft_init_other_stuff.c \
+						ft_init_screen.c \
+						ft_init_sprites.c \
+						ft_init_world.c \
+						ft_read_file.c
+INIT				:=	$(addprefix $(INIT_DIR), $(INIT_FILES))
+
+MAP_DIR				:=	map/
+MAP_FILES			:=	\
+						ft_init_map.c \
+						ft_init_map_cell.c \
+						ft_parse_map.c \
+						ft_parse_map_row.c \
+						ft_read_map_row.c
+MAP					:=	$(addprefix $(MAP_DIR), $(MAP_FILES))
+
+MEMORY_DIR			:=	memory/
+MEMORY_FILES		:=	\
+						ft_free_textures.c \
+						ft_free_world.c
+MEMORY				:=	$(addprefix $(MEMORY_DIR), $(MEMORY_FILES))
+
+MOVEMENTS_DIR		:=	movements/
+MOVEMENTS_FILES		:=	\
+						ft_move.c \
+						ft_rotate.c
+MOVEMENTS			:=	$(addprefix $(MOVEMENTS_DIR), $(MOVEMENTS_FILES))
+
+PARSING_DIR			:=	parsing/
+PARSING_FILES		:=	\
+						ft_parse_color.c \
+						ft_parse_line.c \
+						ft_parse_next_line.c \
+						ft_parse_resolution.c \
+						ft_parse_texture.c
+PARSING				:=	$(addprefix $(PARSING_DIR), $(PARSING_FILES))
+
+RAYCASTING_DIR		:=	raycasting/
+RAYCASTING_FILES	:=	\
+						ft_check_hit.c \
+						ft_draw_textured_line.c \
+						ft_init_vars.c \
+						ft_run_dda.c
+RAYCASTING			:=	$(addprefix $(RAYCASTING_DIR), $(RAYCASTING_FILES))
+
+SPRITES_DIR			:=	sprites/
+SPRITES_FILES		:=	\
+						ft_compute_distances.c \
+						ft_draw_sprite.c \
+						ft_draw_sprite_line.c \
+						ft_draw_sprites.c \
+						ft_sort_sprites.c
+SPRITES				:=	$(addprefix $(SPRITES_DIR), $(SPRITES_FILES))
+
+UTILS_DIR			:=	utils/
+UTILS_FILES			:=	\
+						ft_atoi.c \
+						ft_calloc.c \
+						ft_char_in_str.c \
+						ft_flip_pix.c \
+						ft_get_screen_pixel.c \
+						ft_get_tex_color.c \
+						ft_load_texture.c \
+						ft_load_textures.c \
+						ft_nb_to_mem.c \
+						ft_remove_spaces.c \
+						ft_set_screen_pixel.c \
+						ft_strcmp.c\
+						ft_trim.c \
+						ft_write_bmp_header.c \
+						get_next_line.c \
+						get_next_line_utils.c
+UTILS				:=	$(addprefix $(UTILS_DIR), $(UTILS_FILES))
 
 ##################################
 #   		INGREDIENTS 		 #
@@ -47,7 +123,19 @@ ERR_CHECK			:=	$(addprefix $(ERR_CHECK_DIR), $(ERR_CHECK_FILES))
 INC_DIR				:=	./inc/
 
 SRCS_DIR			:=	./srcs/
-SRCS				:=	main.c
+SRCS				:=	\
+						$(CONTROLLER) \
+						$(DRAW) \
+						$(ERR_CHECK) \
+						$(INIT) \
+						$(MAP) \
+						$(MEMORY) \
+						$(MOVEMENTS) \
+						$(PARSING) \
+						$(RAYCASTING) \
+						$(SPRITES) \
+						$(UTILS) \
+						main.c
 SRCS				:=	$(SRCS:%=$(SRCS_DIR)/%)
 
 MLX					:=	inc/mlx_linux/libmlx.a
