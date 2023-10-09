@@ -105,16 +105,20 @@ UTILS_FILES			:=	\
 						ft_flip_pix.c \
 						ft_get_screen_pixel.c \
 						ft_get_tex_color.c \
+						ft_indexof.c \
 						ft_load_texture.c \
 						ft_load_textures.c \
 						ft_nb_to_mem.c \
 						ft_remove_spaces.c \
 						ft_set_screen_pixel.c \
 						ft_strcmp.c\
+						ft_strdup.c \
+						ft_strjoin.c \
+						ft_strlen.c \
+						ft_substr.c \
 						ft_trim.c \
 						ft_write_bmp_header.c \
-						get_next_line.c \
-						get_next_line_utils.c
+						get_next_line.c 
 UTILS				:=	$(addprefix $(UTILS_DIR), $(UTILS_FILES))
 
 ##################################
@@ -140,7 +144,7 @@ SRCS				:=	$(SRCS:%=$(SRCS_DIR)/%)
 
 MLX					:=	inc/mlx_linux/libmlx.a
 INC_MLX				:=	./inc/mlx_linux/
-LIB					:=	-L ./inc/mlx_linux -lmlx -lXext -lX11
+LIB					:=	-L ./inc/mlx_linux -lmlx -lXext -lX11 -lm
 
 BUILD_DIR			:=	.build
 OBJS				:=	$(SRCS:$(SRCS_DIR)/%.c=$(BUILD_DIR)/%.o)
