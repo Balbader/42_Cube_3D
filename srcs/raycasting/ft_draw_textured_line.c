@@ -28,7 +28,7 @@ void	ft_draw_textured_line(t_world *world, int i, t_texdata data)
 		ft_set_screen_pixel(world->screen, i, j++, world->color_ceiling);
 	while (j < (end >= world->scr_height ? world->scr_height - 1 : end))
 	{
-		color = get_tex_color(texture, data.wall_x,
+		color = ft_get_tex_color(texture, data.wall_x,
 			((j - start) * 1.0) / (end - start));
 		ft_set_screen_pixel(world->screen, i, j++, color);
 	}
