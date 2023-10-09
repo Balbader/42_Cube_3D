@@ -15,7 +15,7 @@
 
 # include "define.h"
 # include "structures.h"
-# include "mlx.h"
+# include "mlx_linux/mlx.h"
 
 # include <unistd.h>
 # include <stdio.h>
