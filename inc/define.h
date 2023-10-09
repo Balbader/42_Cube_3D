@@ -13,6 +13,8 @@
 #ifndef DEFINE_H
 # define DEFINE_H
 
+# define BUFFER_SIZE 1024
+
 # define TRUE 1
 # define FALSE 0
 # define SUCCESS 0
