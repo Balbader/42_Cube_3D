@@ -15,7 +15,7 @@
 int	ft_pressed_key(int key, t_world *world)
 {
 	if (key == KEY_ESC)
-		quit(world, SUCCESS);
+		ft_quit(world, SUCCESS);
 	else if (key == KEY_A)
 		world->ctrls.a = TRUE;
 	else if (key == KEY_D)
