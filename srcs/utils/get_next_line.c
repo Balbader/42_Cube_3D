@@ -10,27 +10,57 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "cub3d.h"
 
-char	*get_next_line(int fd)
+int		read_line(int fd, char **str)
 {
-	static char	buffer[BUFFER_SIZE + 1];
-	char		*line;
-	size_t		index;
+	int		ret;
+	char	*buf;
+	char	*tmp;
 
-	index = 0;
-	if (BUFFER_SIZE < 1 || read(fd, 0, 0) < 0)
+	if (!(buf = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char))))
+		return (-1);
+	while ((ret = read(fd, buf, BUFFER_SIZE)) > 0)
 	{
-		while (buffer[index])
-			buffer[index++] = 0;
-		return (0);
-	}
-	line = NULL;
-	while (buffer[0] || read(fd, buffer, BUFFER_SIZE))
-	{
-		line = strjoin(line, buffer);
-		if (ft_manage_buffer(buffer))
+		buf[ret] = '\0';
+		if (*str)
+		{
+			tmp = *str;
+			*str = ft_strjoin(*str, buf);
+			free(tmp);
+		}
+		else
+			*str = ft_strdup(buf);
+		if (ft_indexof(*str, '\n') > 0)
 			break ;
 	}
-	return (line);
+	free(buf);
+	return (ret);
+}
+
+int		get_next_line(int fd, char **line)
+{
+	static char		*str;
+	int				i;
+	char			*tmp;
+
+	if (fd < 0 || !line || read(fd, str, 0) < 0)
+		return (-1);
+	if (!(ft_indexof(str, '\n') > 0))
+		read_line(fd, &str);
+	if (!str)
+	{
+		*line = ft_strdup("");
+		return (0);
+	}
+	i = 0;
+	while (str[i] && str[i] != '\n')
+		i++;
+	*line = ft_substr(str, 0, i);
+	tmp = (str[i] == '\n') ? ft_strdup(str + i + 1) : NULL;
+	free(str);
+	str = tmp;
+	if (!str)
+		return (0);
+	return (1);
 }
