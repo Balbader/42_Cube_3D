@@ -14,24 +14,24 @@
 
 t_bool	ft_init_other_stuff(t_world *world)
 {
-	if (!parse_map(world))
+	if (!ft_parse_map(world))
 		return (FALSE);
-	cam_init(world);
+	ft_init_camera(world);
 	if (!(world->mlx.ptr = mlx_init()))
 		return (FALSE);
-	load_textures(world);
-	if (!sprites_init(world))
+	ft_load_textures(world);
+	if (!ft_init_sprites(world))
 		return (FALSE);
 	if (!(world->depth_buffer = ft_calloc(world->scr_width, sizeof(double))))
 		return (FALSE);
-	if (!screen_init(world))
+	if (!ft_init_screen(world))
 		return (FALSE);
 	world->nb_pixels = world->scr_width * world->scr_height *
 		(world->screen.bpp >> 3);
 	if (world->save)
 	{
 		world->fd_save = open("cub3d.bmp", O_WRONLY | O_CREAT, 0777);
-		write_bmp_header(world);
+		ft_write_bmp_header(world);
 	}
 	else if (!(world->mlx.win = mlx_new_window(world->mlx.ptr, world->scr_width,
 		world->scr_height, "Cub3D")))

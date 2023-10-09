@@ -34,6 +34,6 @@ void	ft_read_file(t_world *world)
 	if (!world->raw_map)
 	{
 		ft_check_parsing(world, "Map is not defined", 0);
-		quit(world, ERROR);
+		ft_quit(world, ERROR);
 	}
 }

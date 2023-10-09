@@ -20,7 +20,7 @@ t_bool	ft_init_screen(t_world *world)
 		return (FALSE);
 	world->screen.data = mlx_get_data_addr(world->screen.ptr,
 			&(world->screen.bpp), &(world->screen.size_line),
-			&(world->screen.endian))));
+			&(world->screen.endian));
 	if (!world->screen.data)
 		return (FALSE);
 	return (TRUE);
