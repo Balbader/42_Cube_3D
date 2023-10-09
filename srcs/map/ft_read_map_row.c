@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "cub3d.h"
+
 void	ft_read_map_row(t_world *world, char *ptr)
 {
 	char	*tmp;

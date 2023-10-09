@@ -27,7 +27,7 @@ void	ft_init_map(t_world *world)
 		world->map[i] = ft_calloc(world->map_width, sizeof(int));
 		j = 0;
 		while (j < world->map_width)
-			map_init_cell(world, i, j++, &cam_parsed);
+			ft_init_map_cell(world, i, j++, &cam_parsed);
 		free(world->char_map[i]);
 		i++;
 	}

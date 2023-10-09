@@ -21,7 +21,7 @@ void	ft_init_map_cell(t_world *world, int i, int j, t_bool *parsed_camera)
 	else if (ft_indexof("NWSE", world->char_map[i][j]) >= 0)
 	{
 		if (*parsed_camera)
-			parsing_error(world, "Map must only contain one player", 0);
+			ft_check_parsing(world, "Map must only contain one player", 0);
 		else
 		{
 			world->cam_dir = ft_indexof("NWSE", world->char_map[i][j]);
