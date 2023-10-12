@@ -27,7 +27,8 @@ int	main(int ac, char **av)
 {
 	t_world	*world;
 
-	if (!(world = ft_init_world(ac, av)))
+	world = ft_init_world(ac, av);
+	if (!world)
 		return (ERROR);
 	ft_draw(world);
 	if (!world->save)

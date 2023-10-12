@@ -16,7 +16,7 @@ t_world	*ft_init_world(int ac, char **av)
 {
 	t_world	*world;
 
-	world = (t_world *)ft_calloc(1, sizeof(t_world));
+	world = (t_world *)ft_calloc(0, sizeof(t_world));
 	if (!world)
 		return (NULL);
 	world->fd = open(av[1], O_RDONLY);
