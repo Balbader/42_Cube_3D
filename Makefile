@@ -152,7 +152,7 @@ DEPS				:=	$(OBJS:.o=.d)
 
 
 CC					:=	cc
-CFLAGS				:=	-Wall -Wextra -Werror -g3 # -fsanitize=address
+CFLAGS				:=	-Wall -Wextra -Werror -g3 -fsanitize=address
 IFLAGS				:=	$(addprefix -I, $(INC_DIR))
 
 RM					:=	rm -r -f
