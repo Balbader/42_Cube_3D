@@ -20,7 +20,11 @@ void	ft_free_world(t_world *world)
 	{
 		i = 0;
 		while (i < world->map_height)
-			free(world->map[i++]);
+		{
+			free(world->map[i]);
+			i++;
+		}
+		free(world->map[i]);
 		free(world->map);
 	}
 	if (world->sprites)
