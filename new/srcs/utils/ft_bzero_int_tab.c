@@ -20,7 +20,7 @@
 	@param value value to fill the tab with
 	@return nothing
 **/
-void	ft_bzero_int_tab(int *tab, int  tab_size, int value)
+void	ft_bzero_int_tab(int *tab, int tab_size, int value)
 {
 	int	i;
 
