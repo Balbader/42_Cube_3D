@@ -57,6 +57,30 @@ void	ft_free_array(char **arr);
 void	ft_free_mlx(t_mlx *mlx);
 void	ft_free_texture(t_mlx *mlx);
 
+/************************************************************************ mlx */
+int		ft_close(t_mlx *mlx);
+int		ft_key_hook(int key, t_mlx *mlx);
+int		ft_xpm_file_and_addr(void *mlx_ptr, t_img *img);
+int		ft_xpm_texture_and_addr(void *mlx_ptr, char *txt_name, t_img *img);
+void	ft_create_texture(t_mlx *mlx);
+void	ft_mlx_print_line(t_mlx *mlx, int const a[2], int const b[2], \
+		int const color);
+void	ft_choose_h_or_v(t_rayon *rayon, double dist[2], double end_pos[2][2]);
+void	ft_print_min_map(t_mlx *mlx);
+void	ft_start_mlx(t_data *data);
+void	ft_fill_floor_wall_and_ceiling(t_mlx *const mlx, \
+		t_rayon const *const rayon, float const line_h, int const x);
+void	ft_print_3d(t_mlx *const mlx, t_rayon *const rayon, double ra, int *x);
+double	ft_dist(double ax, double ay, double bx, double by);
+void	ft_print_nord(t_img *const img[2], t_rayon const *const rayon, \
+		float i[4]);
+void	ft_print_south(t_img *const img[2], t_rayon const *const rayon, \
+		float i[4]);
+void	ft_print_west(t_img *const img[2], t_rayon const *const rayon, \
+		float i[4]);
+void	ft_print_east(t_img *const img[2], t_rayon const *const rayon, \
+		float i[4]);
+
 /***************************************************************** raycasting */
 double	ft_horizontal_check(t_mlx *mlx, double re, double end_pos[2]);
 double	ft_horizontal_while(t_mlx *mlx, double ray[2], double offset[2]);
