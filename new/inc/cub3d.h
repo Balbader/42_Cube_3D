@@ -88,4 +88,34 @@ double	ft_vertical_check(t_mlx *mlx, double ra, double end_pos[2]);
 double	ft_vertical_while(t_mlx *mlx, double rayon[2], \
 		double offset, double end_pos[2]);
 
+/***************************************************************** utils */
+int		ft_lst_size(t_list *lst);
+int		ft_atoi(char *str);
+int		ft_atoi_base(char *str, int str_base);
+int		ft_nbrlen(char *str);
+int		ft_create_trgb(int t, int r, int g, int b);
+int		ft_isdigit(char c);
+int 	ft_is_color_char(char c);
+int		ft_is_cardinal_char(char c); 
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_is_map_str(char *str);
+int		ft_check_extension(char *str, char *ext);
+char	**ft_split(t_data **data, t_list **list, char *str, char c);
+char	*ft_strchr(char *str, char c);
+char	*ft_sub_trim_str(char *str, char *set);
+char	*ft_strndup(char *str, int n);
+void	*ft_ternary(int const cond, void *valid_1, void *valid_2);
+void	ft_print_array(char **arr);
+void	ft_print_map(char **map);
+void	ft_print_data(t_data *data);
+void	ft_print_list(t_list *list);
+void	ft_print_exit_error(char *msg);
+void	ft_lst_clear(t_list **lst);
+void	ft_lstlast(t_list *lst);
+void	ft_bzero_int_tab(int *tab, int  tab_size, int value);
+t_list	*ft_lst_create(char *line);
+t_list	*ft_lst_addback(t_list **lst, t_list *elem);
+
 #endif // !CUB3D_H
