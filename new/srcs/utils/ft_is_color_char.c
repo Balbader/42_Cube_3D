@@ -12,7 +12,7 @@
 
 #include "cub3d.h"
 
-int ft_is_color_char(char c)
+int	ft_is_color_char(char c)
 {
 	return (c == 'F' || c == 'C');
 }
