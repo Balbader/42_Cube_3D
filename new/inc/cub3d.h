@@ -60,7 +60,10 @@ void	ft_free_texture(t_mlx *mlx);
 /*********************************************************************** fill */
 void	ft_fill_data(t_data **data, t_list **list);
 void	ft_fill_map(t_data **data, t_list **list);
+void	ft_fill_list(int fd, t_list **list);
 
+/************************************************************************ gnl */
+int	get_next_line(int fd, char **line);
 
 /*********************************************************************** init */
 void	ft_find_player_pos(char **tmp, t_mlx *mlx);
