@@ -40,6 +40,8 @@ void	ft_check_open_textures(t_data **data);
 void	ft_check_textures_extensions(t_data **data);
 void	ft_close_dir_error_exit(t_data **data, int *fd);
 void	ft_close_error_exit(t_data **data, int *fd);
+void	ft_check_value_limits(t_data **data, t_list **list, \
+			char **array, char **str);
 
 /********************************************************************** clear */
 void	ft_clear_all_exit(t_data **data, t_list **list, char *msg);
@@ -61,6 +63,8 @@ void	ft_free_texture(t_mlx *mlx);
 void	ft_fill_data(t_data **data, t_list **list);
 void	ft_fill_map(t_data **data, t_list **list);
 void	ft_fill_list(int fd, t_list **list);
+void	ft_fill_texture(t_data **data, t_list **list, char **dest, char *src);
+void	ft_fill_rgb(t_data **data, t_list **list, int *dst, char *src);
 
 /************************************************************************ gnl */
 int	get_next_line(int fd, char **line);
@@ -121,6 +125,7 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 int		ft_is_map_str(char *str);
 int		ft_check_extension(char *str, char *ext);
+int		ft_get_hexa_rgb_values(t_data **data, t_list **list, char **str);
 char	*ft_copy_str(char *dest, char *src);
 char	**ft_split(t_data **data, t_list **list, char *str, char c);
 char	*ft_strchr(char *str, char c);
