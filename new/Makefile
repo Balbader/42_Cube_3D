@@ -97,7 +97,7 @@ INIT_DIR			:=	init/
 INIT_FILES			:=	\
 						ft_init_data.c \
 						ft_init_map.c \
-						ft_init_plyer.c \
+						ft_init_player.c
 INIT				:=	$(addprefix $(INIT_DIR), $(INIT_FILES))
 
 LIBFT_DIR			:=	libft/
@@ -152,12 +152,12 @@ UTILS_FILES			:=	\
 						ft_check_close.c \
 						ft_check_extension.c \
 						ft_check_open.c \
-						ft_cloxe_all_textures.c \
+						ft_close_all_textures.c \
 						ft_copy_str.c \
 						ft_create_trgb.c \
 						ft_find_player_pos.c \
 						ft_get_dir_radian.c \
-						ft_get_hexa_rgn_values.c \
+						ft_get_hexa_rgb_values.c \
 						ft_get_map_size.c \
 						ft_get_player_info.c \
 						ft_is_cardinal_char.c \
@@ -173,7 +173,7 @@ UTILS_FILES			:=	\
 						ft_print_list.c \
 						ft_print_map.c \
 						ft_set_line_type.c \
-						ft_sub_trim.c \
+						ft_sub_trim_str.c \
 						ft_ternary.c
 UTILS				:=	$(addprefix $(UTILS_DIR), $(UTILS_FILES))
 

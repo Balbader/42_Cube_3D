@@ -12,6 +12,8 @@
 
 #include "cub3d.h"
 
+#define X 0
+
 double	ft_vertical_check(t_mlx *mlx, double ra, double end_pos[2])
 {
 	double	rayon[2];

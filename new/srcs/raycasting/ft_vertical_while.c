@@ -12,8 +12,10 @@
 
 #include "cub3d.h"
 
+#define X 0
+
 double	ft_vertical_while(t_mlx *mlx, double rayon[2], \
-		double offset, double end_pos[2])
+		double *offset, double end_pos[2])
 {
 	int		map[2];
 	int		dof;
@@ -31,7 +33,7 @@ double	ft_vertical_while(t_mlx *mlx, double rayon[2], \
 			&& map[X] < (int)ft_strlen(mlx->data->map[map[1]])
 			&& mlx->data->map[map[1]][map[X]] == '1')
 			return (end_pos[X] = rayon[X], end_pos[1] = rayon[1]
-				, dist(mlx->player[X_PIXEL], mlx->player[Y_PIXEL]
+				, ft_dist(mlx->player[X_PIXEL], mlx->player[Y_PIXEL]
 					, rayon[X], rayon[1]));
 		else
 		{

@@ -33,4 +33,3 @@ void	ft_get_map_size(t_data **data, t_list **list)
 	(*data)->map_height = height;
 	(*data)->map_width = width;
 }
-}

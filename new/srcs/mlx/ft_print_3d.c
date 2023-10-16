@@ -27,10 +27,9 @@ static t_fct const	g_fct[] = {
 void	ft_fill_floor_wall_and_ceiling(t_mlx *const mlx, \
 		t_rayon const *const rayon, float const line_h, int const x)
 {
-	const float	ceil_h;
+	const float	ceil_h = (HEIGHT - line_h) / 2;
 	float		i;
 
-	ceil_h = (HEIGHT - line_h) / 2;
 	i = 0;
 	while (i < ceil_h)
 	{
@@ -38,8 +37,8 @@ void	ft_fill_floor_wall_and_ceiling(t_mlx *const mlx, \
 		i++;
 	}
 	g_fct[rayon->type]((t_img *[]){&mlx->pict[IMAGE], &mlx->pict[rayon->type]},
-			rayon, (float []){x, i, lineh, ceil_h});
-	i = lineh + ceil_h;
+			rayon, (float []){x, i, line_h, ceil_h});
+	i = line_h + ceil_h;
 	while (i < HEIGHT)
 	{
 		mlx->pict[IMAGE].addr[x + (int)i * WIDTH] = mlx->data->floor_rgb;
@@ -50,7 +49,7 @@ void	ft_fill_floor_wall_and_ceiling(t_mlx *const mlx, \
 void	ft_print_3d(t_mlx *const mlx, t_rayon *const rayon, double ra, int *x)
 {
 	double	ca;
-	float	lineh;
+	float	line_h;
 	double	opposite;
 
 	ca = mlx->player[ANGLE] - ra;
@@ -62,7 +61,7 @@ void	ft_print_3d(t_mlx *const mlx, t_rayon *const rayon, double ra, int *x)
 	opposite = 2 * 0.57735026919 * rayon->dist;
 	if (opposite <= 0)
 		opposite = 0.1;
-	lineh = 64 * HEIGHT / opposite;
-	fill_floor_wall_and_ceiling(mlx, rayon, lineh, *x);
+	line_h = 64 * HEIGHT / opposite;
+	ft_fill_floor_wall_and_ceiling(mlx, rayon, line_h, *x);
 	*x += 1;
 }

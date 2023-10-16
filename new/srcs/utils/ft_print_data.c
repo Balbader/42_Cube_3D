@@ -25,5 +25,5 @@ void	ft_print_data(t_data *data)
 	printf("Player y position  : %d\n", data->player_y);
 	printf("Player direction   : %c\n", data->player_dir);
 	printf("Player dir radian  : %f\n\n", data->player_dir_radian);
-	print_map(data->map);
+	ft_print_map(data->map);
 }

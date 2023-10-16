@@ -12,7 +12,10 @@
 
 #include "cub3d.h"
 
-double	ft_horizontal_while(t_mlx *mlx, double ray[2], double offset[2])
+#define X 0
+
+double	ft_horizontal_while(t_mlx *mlx, double ray[2], double offset[2], \
+		double end_pos[2])
 {
 	int		map[2];
 	int		dof;
@@ -26,7 +29,7 @@ double	ft_horizontal_while(t_mlx *mlx, double ray[2], double offset[2])
 			&& map[X] < (int)ft_strlen(mlx->data->map[map[1]])
 			&& mlx->data->map[map[1]][map[X]] == '1')
 			return (end_pos[X] = ray[X], end_pos[1] = ray[1]
-				, dist(mlx->player[X_PIXEL], mlx->player[Y_PIXEL],
+				, ft_dist(mlx->player[X_PIXEL], mlx->player[Y_PIXEL],
 					ray[X], ray[1]));
 		else
 		{

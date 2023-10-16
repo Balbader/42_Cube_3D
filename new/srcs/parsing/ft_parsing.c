@@ -29,15 +29,15 @@ void	ft_parsing(int ac, char **av, t_data **data)
 
 	fd = 0;
 	list = NULL;
-	ft_check_argc(argc, argv);
-	ft_check_open(argv[1], &fd);
+	ft_check_ac(ac, av);
+	ft_check_open(av[1], &fd);
 	ft_fill_list(fd, &list);
 	ft_check_list_syntax(&list);
 	ft_check_list_duplicates(&list);
 	ft_check_splitted_map(&list);
 	ft_check_close(fd, list);
 	ft_fill_data(data, &list);
-	ft_ft_lst_clear(&list);
+	ft_lst_clear(&list);
 	ft_check_textures_extensions(data);
 	ft_check_open_textures(data);
 	ft_check_player_count(data);

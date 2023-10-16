@@ -121,10 +121,11 @@ void	ft_parsing(int ac, char **av, t_data **data);
 
 /***************************************************************** raycasting */
 double	ft_horizontal_check(t_mlx *mlx, double re, double end_pos[2]);
-double	ft_horizontal_while(t_mlx *mlx, double ray[2], double offset[2]);
+double	ft_horizontal_while(t_mlx *mlx, double ray[2], \
+		double offset[2], double end_pos[2]);
 double	ft_vertical_check(t_mlx *mlx, double ra, double end_pos[2]);
 double	ft_vertical_while(t_mlx *mlx, double rayon[2], \
-		double offset, double end_pos[2]);
+		double *offset, double end_pos[2]);
 
 /***************************************************************** utils */
 int		ft_set_line_type(char *str);

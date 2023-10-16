@@ -95,7 +95,7 @@ void	ft_start_mlx(t_data *data)
 	if (!mlx.mlx_ptr)
 		return ;
 	ft_print_min_map(&mlx);
-	mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, key_hook, &mlx);
+	mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, ft_key_hook, &mlx);
 	mlx_hook(mlx.win_ptr, ClientMessage, StructureNotifyMask, ft_close, &mlx);
 	mlx_loop(mlx.mlx_ptr);
 }

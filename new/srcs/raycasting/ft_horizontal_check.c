@@ -12,7 +12,9 @@
 
 #include "cub3d.h"
 
-double	ft_horizontal_check(t_mlx *mlx, double re, double end_pos[2])
+#define X 0
+
+double	ft_horizontal_check(t_mlx *mlx, double ra, double end_pos[2])
 {
 	double	ray[2];
 	double	offset[2];
