@@ -25,6 +25,7 @@ int		ft_is_not_only_one_or_space_str(char *str);
 void	ft_check_closed_map(t_data **data);
 void	ft_check_first_last_char(t_data **data);
 void	ft_check_inner_map(t_data **data);
+void	ft_check_player_count(t_data **data);
 void	ft_check_side(t_data **data, int x, int y, int dir);
 
 /* syntax_err */
@@ -73,6 +74,7 @@ int	get_next_line(int fd, char **line);
 void	ft_find_player_pos(char **tmp, t_mlx *mlx);
 void	ft_init_player(t_mlx *mlx, int *pos);
 void	ft_init_map(t_data **data, t_list **list);
+void	ft_init_data(t_data **data, t_list **list);
 bool	ft_is_player(char c, double *angle);
 
 /************************************************************************ mlx */
@@ -141,6 +143,9 @@ void	ft_print_exit_error(char *msg);
 void	ft_lst_clear(t_list **lst);
 void	ft_lstlast(t_list *lst);
 void	ft_bzero_int_tab(int *tab, int tab_size, int value);
+void	*ft_memset(void *b, int c, int len);
+void	ft_get_dir_radian(t_data **data, char player_pos);
+void	ft_get_player_info(t_data **data);
 t_list	*ft_lst_create(char *line);
 t_list	*ft_lst_addback(t_list **lst, t_list *elem);
 
