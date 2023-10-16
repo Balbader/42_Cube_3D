@@ -19,45 +19,79 @@ NAME				:=	cub3d
 ##################################
 #    	    SRCS FILES			 #
 ##################################
-CONTROLLER_DIR		:=	controller/
-CONTROLLER_FILES	:=	\
-						ft_pressed_key.c \
-						ft_quit.c \
-						ft_released_key.c
-CONTROLLER			:=	$(addprefix $(CONTROLLER_DIR), $(CONTROLLER_FILES))
+CLEAR_DIR			:=	controller/
+CLEAR_FILES			:=	\
+						ft_clear_all_exit.c \
+						ft_clear_data.c \
+						ft_clear_data_exit.c \
+						ft_clear_data_nclosedmap_exit.c \
+						ft_clear_data_syntax_exit.c \
+						ft_clear_list_exit.c \
+						ft_clear_list_free_exit.c \
+						ft_clear_syntax_exit.c \
+						ft_clear_mlx_fd_data_exit.c
+CLEAR				:=	$(addprefix $(CLEAR_DIR), $(CLEAR_FILES))
 
-DRAW_DIR			:=	draw/
-DRAW_FILES			:=	\
-						ft_draw.c \
-						ft_draw_walls.c
-DRAW				:=	$(addprefix $(DRAW_DIR), $(DRAW_FILES))
+DUP_ERR_DIR			:=	duplicates_err/
+DUP_ERR_FILES		:=	\
+						ft_check_cardinal_duplicates.c \
+						ft_check_color_duplicates.c \
+						ft_check_list_duplicates.c \
+						ft_check_missing_lines.c
+DUP_ERR				:=	$(addprefix $(DUP_ERR_DIR), $(DUP_ERR_FILES))
+
+MAP_ERR_DIR			:=	map_err/
+MAP_ERR_FILES		:=	\
+						ft_check_closed_map.c \
+						ft_check_first_last_char.c \
+						ft_check_inner_map.c \
+						ft_check_player_count.c \
+						ft_check_side.c \
+						ft_is_not_only_one_or_space_str.c
+MAP_ERR				:=	$(addprefix $(MAP_ERR_DIR), $(MAP_ERR_FILES))
+
+SYNTAX_ERR_DIR		:=	syntax_err/
+SYNTAX_ERR_FILES	:=	\
+						ft_check_cardinal_syntax.c \
+						ft_check_fc_syntax.c \
+						ft_check_last_element.c \
+						ft_check_list_syntax.c \
+						ft_check_splitted_map.c
+SYNTAX_ERR			:=	$(addprefix $(SYNTAX_ERR_DIR), $(SYNTAX_ERR_FILES))
+
+TEXTURES_ERR_DIR	:=	textures_err/
+TEXTURES_ERR_FILES	:=	\
+						ft_check_open_textures.c \
+						ft_check_textures_extensions.c \
+						ft_check_texture_size.c \
+						ft_check_value_limits.c \
+						ft_close_dir_error_exit.c \
+						ft_close_error_exit.c
+TEXTURES_ERR		:=	$(addprefix $(TEXTURES_ERR_DIR), $(TEXTURES_ERR_FILES))
 
 ERR_CHECK_DIR		:=	err_check/
 ERR_CHECK_FILES		:=	\
-						ft_check_cell.c \
-						ft_check_map.c \
-						ft_check_parsing.c \
-						ft_check_world.c
+						$(DUP_ERR) \
+						$(MAP_ERR) \
+						$(SYNTAX_ERR) \
+						$(TEXTURES_ERR)
 ERR_CHECK			:=	$(addprefix $(ERR_CHECK_DIR), $(ERR_CHECK_FILES))
 
-INIT_DIR			:=	init/
-INIT_FILES			:=	\
-						ft_init_camera.c \
-						ft_init_other_stuff.c \
-						ft_init_screen.c \
-						ft_init_sprites.c \
-						ft_init_world.c \
-						ft_read_file.c
-INIT				:=	$(addprefix $(INIT_DIR), $(INIT_FILES))
+FILL_DIR			:=	fill/
+FILL_FILES			:=	\
+						ft_fill_data.c \
+						ft_fill_list.c \
+						ft_fill_map.c \
+						ft_fill_rgb.c \
+						ft_fill_texture.c
+FILL				:=	$(addprefix $(FILL_DIR), $(FILL_FILES))
 
-MAP_DIR				:=	map/
-MAP_FILES			:=	\
-						ft_init_map.c \
-						ft_init_map_cell.c \
-						ft_parse_map.c \
-						ft_parse_map_row.c \
-						ft_read_map_row.c
-MAP					:=	$(addprefix $(MAP_DIR), $(MAP_FILES))
+FREE_DIR			:=	free/
+FREE_FILES			:=	\
+						ft_free_array.c \
+						ft_free_mlx.c \
+						ft_free_texture.c
+FREE				:=	$(addprefix $(FREE_DIR), $(FREE_FILES))
 
 INIT_DIR			:=	init/
 INIT_FILES			:=	\
