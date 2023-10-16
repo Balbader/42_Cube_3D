@@ -57,9 +57,15 @@ void	ft_free_array(char **arr);
 void	ft_free_mlx(t_mlx *mlx);
 void	ft_free_texture(t_mlx *mlx);
 
+/*********************************************************************** fill */
+void	ft_fill_data(t_data **data, t_list **list);
+void	ft_fill_map(t_data **data, t_list **list);
+
+
 /*********************************************************************** init */
 void	ft_find_player_pos(char **tmp, t_mlx *mlx);
 void	ft_init_player(t_mlx *mlx, int *pos);
+void	ft_init_map(t_data **data, t_list **list);
 bool	ft_is_player(char c, double *angle);
 
 /************************************************************************ mlx */
@@ -112,10 +118,12 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 int		ft_is_map_str(char *str);
 int		ft_check_extension(char *str, char *ext);
+char	*ft_copy_str(char *dest, char *src);
 char	**ft_split(t_data **data, t_list **list, char *str, char c);
 char	*ft_strchr(char *str, char c);
 char	*ft_sub_trim_str(char *str, char *set);
 char	*ft_strndup(char *str, int n);
+void	ft_get_map_size(t_data **data, t_list **list);
 void	*ft_ternary(int const cond, void *valid_1, void *valid_2);
 void	ft_print_array(char **arr);
 void	ft_print_map(char **map);
