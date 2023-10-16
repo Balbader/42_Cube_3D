@@ -81,6 +81,11 @@ void	ft_print_west(t_img *const img[2], t_rayon const *const rayon, \
 void	ft_print_east(t_img *const img[2], t_rayon const *const rayon, \
 		float i[4]);
 
+/******************************************************************** parsing */
+void	ft_check_ac(int ac, char **av);
+void	ft_parsing(int ac, char **av, t_data **data);
+
+
 /***************************************************************** raycasting */
 double	ft_horizontal_check(t_mlx *mlx, double re, double end_pos[2]);
 double	ft_horizontal_while(t_mlx *mlx, double ray[2], double offset[2]);
