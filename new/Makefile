@@ -19,7 +19,7 @@ NAME				:=	cub3d
 ##################################
 #    	    SRCS FILES			 #
 ##################################
-CLEAR_DIR			:=	controller/
+CLEAR_DIR			:=	clear/
 CLEAR_FILES			:=	\
 						ft_clear_all_exit.c \
 						ft_clear_data.c \
@@ -27,8 +27,8 @@ CLEAR_FILES			:=	\
 						ft_clear_data_nclosedmap_exit.c \
 						ft_clear_data_syntax_exit.c \
 						ft_clear_list_exit.c \
-						ft_clear_list_free_exit.c \
-						ft_clear_syntax_exit.c \
+						ft_clear_list_free_line_exit.c \
+						ft_clear_list_syntax_exit.c \
 						ft_clear_mlx_fd_data_exit.c
 CLEAR				:=	$(addprefix $(CLEAR_DIR), $(CLEAR_FILES))
 
@@ -105,7 +105,7 @@ LIBFT_FILES			:=	\
 						ft_atoi_base.c \
 						ft_atoi.c \
 						ft_isdigit.c \
-						ft_lst_addback.c \
+						ft_lstaddback.c \
 						ft_lst_clear.c \
 						ft_lst_create.c \
 						ft_lstlast.c \
@@ -184,6 +184,16 @@ INC_DIR				:=	./inc/
 
 SRCS_DIR			:=	./srcs/
 SRCS				:=	\
+						$(CLEAR) \
+						$(ERR_CHECK) \
+						$(FILL) \
+						$(FREE) \
+						$(INIT) \
+						$(LIBFT) \
+						$(MLX) \
+						$(PARSING) \
+						$(RAYCASTING) \
+						$(UTILS) \
 						main.c
 SRCS				:=	$(SRCS:%=$(SRCS_DIR)/%)
 
