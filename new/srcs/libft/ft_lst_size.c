@@ -12,7 +12,7 @@
 
 #include "cub3d.h"
 
-int	ft_lst_size(t_list *lst)
+int	ft_lst_size(t_list *list)
 {
 	int	i;
 

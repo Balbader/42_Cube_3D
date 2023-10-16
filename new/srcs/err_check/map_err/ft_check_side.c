@@ -14,12 +14,12 @@
 
 void	ft_check_side(t_data **data, int x, int y, int dir)
 {
-	if (direction == NORTH && (*data)->map[y - 1][x] == ' ')
+	if (dir == NORTH && (*data)->map[y - 1][x] == ' ')
 		ft_clear_data_nclosedmap_exit(data, y, NCLOSEDMAP);
-	if (direction == SOUTH && (*data)->map[y + 1][x] == ' ')
+	if (dir == SOUTH && (*data)->map[y + 1][x] == ' ')
 		ft_clear_data_nclosedmap_exit(data, y, NCLOSEDMAP);
-	if (direction == WEST && (*data)->map[y][x - 1] == ' ')
+	if (dir == WEST && (*data)->map[y][x - 1] == ' ')
 		ft_clear_data_nclosedmap_exit(data, y, NCLOSEDMAP);
-	if (direction == EAST && (*data)->map[y][x + 1] == ' ' )
+	if (dir == EAST && (*data)->map[y][x + 1] == ' ' )
 		ft_clear_data_nclosedmap_exit(data, y, NCLOSEDMAP);
 }

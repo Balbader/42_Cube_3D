@@ -17,7 +17,7 @@ int	main(int ac, char **av)
 	t_data	*data;
 
 	data = NULL;
-	ft_parsing(argc, argv, &data);
+	ft_parsing(ac, av, &data);
 	ft_start_mlx(data);
 	ft_clear_data(&data);
 	return (EXIT_SUCCESS);

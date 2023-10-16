@@ -12,7 +12,7 @@
 
 #include "cub3d.h"
 
-static int	count_words(char *str, char c)
+static int	ft_count_words(char *str, char c)
 {
 	int		wcount;
 
@@ -76,18 +76,18 @@ char	**ft_split(t_data **data, t_list **list, char *str, char c)
 
 	if (!str)
 		return (NULL);
-	wcount = count_words(str, c);
+	wcount = ft_count_words(str, c);
 	if (wcount != 3)
 	{
 		if (wcount < 3)
 		{
 			free(str);
-			clear_all_exit(data, list, MISSRGB);
+			ft_clear_all_exit(data, list, MISSRGB);
 		}
 		if (wcount > 3)
 		{
 			free(str);
-			clear_all_exit(data, list, TMRGB);
+			ft_clear_all_exit(data, list, TMRGB);
 		}
 	}
 	words = (char **)malloc(sizeof(char *) * (wcount + 1));

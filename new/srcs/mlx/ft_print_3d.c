@@ -18,10 +18,10 @@ typedef void		(*t_fct)(
 	float i[4]);
 
 static t_fct const	g_fct[] = {
-	print_nord,
-	print_south,
-	print_west,
-	print_east
+	ft_print_nord,
+	ft_print_south,
+	ft_print_west,
+	ft_print_east
 };
 
 void	ft_fill_floor_wall_and_ceiling(t_mlx *const mlx, \

@@ -24,5 +24,5 @@ void	ft_fill_data(t_data **data, t_list **list)
 	ft_get_map_size(data, list);
 	ft_init_map(data, list);
 	ft_fill_map(data, list);
-	ft_get_player_infos(data);
+	ft_get_player_info(data);
 }

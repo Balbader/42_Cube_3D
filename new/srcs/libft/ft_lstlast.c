@@ -12,11 +12,11 @@
 
 #include "cub3d.h"
 
-void	ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *list)
 {
-	if (!lst)
+	if (!list)
 		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	while (list->next)
+		list = list->next;
+	return (list);
 }

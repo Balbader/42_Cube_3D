@@ -26,13 +26,13 @@ void	ft_fill_list(int fd, t_list **list)
 		elem = ft_lst_create(line);
 		if (!elem)
 			ft_clear_list_free_line_exit(list, line);
-		*list = ft_lst_addback(list, elem);
+		*list = ft_lstaddback(list, elem);
 		ret = get_next_line(fd, &line);
 	}
 	if (ret == 0)
 	{
 		if (line[0] != '\0')
-			*list = ft_lst_addback(list, elem);
+			*list = ft_lstaddback(list, elem);
 		free(line);
 	}
 	else

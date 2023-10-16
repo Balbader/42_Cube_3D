@@ -21,7 +21,7 @@ t_list	*ft_lst_create(char *line)
 		return (NULL);
 	elem->line = line;
 	elem->line_size = ft_strlen(elem->line);
-	elem->type = set_line_type(elem->line);
+	elem->type = ft_set_line_type(elem->line);
 	elem->next = NULL;
 	return (elem);
 }

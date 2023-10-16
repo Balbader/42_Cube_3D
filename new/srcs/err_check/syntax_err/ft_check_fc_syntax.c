@@ -19,7 +19,7 @@ int	ft_check_fc_syntax(char *str)
 	str++;
 	while (*str)
 	{
-		if (!is_digit(*str) && *str != ' ' && *str != ',')
+		if (!ft_isdigit(*str) && *str != ' ' && *str != ',')
 			return (EXIT_FAILURE);
 		str++;
 	}

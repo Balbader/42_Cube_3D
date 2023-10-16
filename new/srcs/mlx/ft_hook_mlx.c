@@ -79,7 +79,7 @@ int	ft_key_hook(int key, t_mlx *mlx)
 	if (key == ESCAPE)
 	{
 		mlx_clear_window(mlx->mlx_ptr, mlx->win_ptr);
-		free_mlx(mlx);
+		ft_free_mlx(mlx);
 		exit(0);
 	}
 	else if (key == D)

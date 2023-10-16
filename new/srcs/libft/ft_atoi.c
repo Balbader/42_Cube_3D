@@ -27,7 +27,7 @@ int	ft_atoi(char *str)
 			sign *= -1;
 		str++;
 	}
-	while (is_digit(*str))
+	while (ft_isdigit(*str))
 	{
 		result = result * 10 + (*str - '0');
 		str++;
