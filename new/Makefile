@@ -59,66 +59,88 @@ MAP_FILES			:=	\
 						ft_read_map_row.c
 MAP					:=	$(addprefix $(MAP_DIR), $(MAP_FILES))
 
-MEMORY_DIR			:=	memory/
-MEMORY_FILES		:=	\
-						ft_free_textures.c \
-						ft_free_world.c
-MEMORY				:=	$(addprefix $(MEMORY_DIR), $(MEMORY_FILES))
+INIT_DIR			:=	init/
+INIT_FILES			:=	\
+						ft_init_data.c \
+						ft_init_map.c \
+						ft_init_plyer.c \
+INIT				:=	$(addprefix $(INIT_DIR), $(INIT_FILES))
 
-MOVEMENTS_DIR		:=	movements/
-MOVEMENTS_FILES		:=	\
-						ft_move.c \
-						ft_rotate.c
-MOVEMENTS			:=	$(addprefix $(MOVEMENTS_DIR), $(MOVEMENTS_FILES))
+LIBFT_DIR			:=	libft/
+LIBFT_FILES			:=	\
+						ft_atoi_base.c \
+						ft_atoi.c \
+						ft_isdigit.c \
+						ft_lst_addback.c \
+						ft_lst_clear.c \
+						ft_lst_create.c \
+						ft_lstlast.c \
+						ft_lst_size.c \
+						ft_memset.c \
+						ft_split.c \
+						ft_strchr.c \
+						ft_strcmp.c \
+						ft_strlen.c \
+						ft_strncmp.c \
+						ft_strndup.c \
+						get_next_line.c
+LIBFT				:=	$(addprefix $(LIBFT_DIR), $(LIBFT_FILES))
+
+MLX_DIR				:=	mlx/
+MLX_FILES			:=	\
+						ft_create_texture.c \
+						ft_get_texture_pixel.c \
+						ft_hook_mlx.c \
+						ft_mlx_utils.c \
+						ft_print_3d.c \
+						ft_start_mlx.c \
+						ft_xpm_file_and_addr.c \
+						ft_xpm_texture_and_addr.c
+MLX					:=	$(addprefix $(MLX_DIR), $(MLX_FILES))
 
 PARSING_DIR			:=	parsing/
 PARSING_FILES		:=	\
-						ft_parse_color.c \
-						ft_parse_line.c \
-						ft_parse_next_line.c \
-						ft_parse_resolution.c \
-						ft_parse_texture.c
+						ft_check_ac.c \
+						ft_parsing.c
 PARSING				:=	$(addprefix $(PARSING_DIR), $(PARSING_FILES))
 
 RAYCASTING_DIR		:=	raycasting/
 RAYCASTING_FILES	:=	\
-						ft_check_hit.c \
-						ft_draw_textured_line.c \
-						ft_init_vars.c \
-						ft_run_dda.c
+						ft_horizontal_check.c \
+						ft_horizontal_while.c \
+						ft_vertical_check.c \
+						ft_vertical_while.c
 RAYCASTING			:=	$(addprefix $(RAYCASTING_DIR), $(RAYCASTING_FILES))
-
-SPRITES_DIR			:=	sprites/
-SPRITES_FILES		:=	\
-						ft_compute_distances.c \
-						ft_draw_sprite.c \
-						ft_draw_sprite_line.c \
-						ft_draw_sprites.c \
-						ft_sort_sprites.c
-SPRITES				:=	$(addprefix $(SPRITES_DIR), $(SPRITES_FILES))
 
 UTILS_DIR			:=	utils/
 UTILS_FILES			:=	\
-						ft_atoi.c \
-						ft_calloc.c \
-						ft_char_in_str.c \
-						ft_flip_pix.c \
-						ft_get_screen_pixel.c \
-						ft_get_tex_color.c \
-						ft_indexof.c \
-						ft_load_texture.c \
-						ft_load_textures.c \
-						ft_nb_to_mem.c \
-						ft_remove_spaces.c \
-						ft_set_screen_pixel.c \
-						ft_strcmp.c\
-						ft_strdup.c \
-						ft_strjoin.c \
-						ft_strlen.c \
-						ft_substr.c \
-						ft_trim.c \
-						ft_write_bmp_header.c \
-						get_next_line.c 
+						ft_bzero_int_tab.c \
+						ft_check_close.c \
+						ft_check_extension.c \
+						ft_check_open.c \
+						ft_cloxe_all_textures.c \
+						ft_copy_str.c \
+						ft_create_trgb.c \
+						ft_find_player_pos.c \
+						ft_get_dir_radian.c \
+						ft_get_hexa_rgn_values.c \
+						ft_get_map_size.c \
+						ft_get_player_info.c \
+						ft_is_cardinal_char.c \
+						ft_is_color_char.c \
+						ft_is_map_str.c \
+						ft_is_player.c \
+						ft_nbrlen.c \
+						ft_open_all_dir_textures.c \
+						ft_open_all_textures.c \
+						ft_print_array.c \
+						ft_print_data.c \
+						ft_print_exit_error.c \
+						ft_print_list.c \
+						ft_print_map.c \
+						ft_set_line_type.c \
+						ft_sub_trim.c \
+						ft_ternary.c
 UTILS				:=	$(addprefix $(UTILS_DIR), $(UTILS_FILES))
 
 ##################################
@@ -128,17 +150,6 @@ INC_DIR				:=	./inc/
 
 SRCS_DIR			:=	./srcs/
 SRCS				:=	\
-						$(CONTROLLER) \
-						$(DRAW) \
-						$(ERR_CHECK) \
-						$(INIT) \
-						$(MAP) \
-						$(MEMORY) \
-						$(MOVEMENTS) \
-						$(PARSING) \
-						$(RAYCASTING) \
-						$(SPRITES) \
-						$(UTILS) \
 						main.c
 SRCS				:=	$(SRCS:%=$(SRCS_DIR)/%)
 
