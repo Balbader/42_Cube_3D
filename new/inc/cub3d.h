@@ -13,6 +13,19 @@
 #ifndef CUB3D_H
 # define CUB3D_H
 
+# include "define.h"
+# include "enum.h"
+# include "errors.h"
+# include "structures.h"
+# include "./mlx_linux/mlx.h"
+
+# include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <stdbool.h>
+# include <fcntl.h>
+# include <math.h>
+# include <X11/X.h>
 /****************************************************************** err_check */
 /* duplicates_err */
 void	ft_check_cardinal_duplicates(t_list **list, int *dup, char *str, int i);
@@ -114,7 +127,8 @@ double	ft_vertical_while(t_mlx *mlx, double rayon[2], \
 		double offset, double end_pos[2]);
 
 /***************************************************************** utils */
-int		ft_lst_size(t_list *lst);
+int		ft_set_line_type(char *str);
+int		ft_lst_size(t_list *list);
 int		ft_atoi(char *str);
 int		ft_atoi_base(char *str, int str_base);
 int		ft_nbrlen(char *str);
@@ -142,7 +156,6 @@ void	ft_print_data(t_data *data);
 void	ft_print_list(t_list *list);
 void	ft_print_exit_error(char *msg);
 void	ft_lst_clear(t_list **lst);
-void	ft_lstlast(t_list *lst);
 void	ft_bzero_int_tab(int *tab, int tab_size, int value);
 void	*ft_memset(void *b, int c, int len);
 void	ft_get_dir_radian(t_data **data, char player_pos);
@@ -152,6 +165,7 @@ void	ft_open_all_textures(t_data **data, int *fd, void *mlx);
 void	ft_open_all_dir_textures(t_data **data, int *fd, void *mlx);
 void	ft_check_open(char *filename, int *fd);
 t_list	*ft_lst_create(char *line);
-t_list	*ft_lst_addback(t_list **lst, t_list *elem);
+t_list	*ft_lstaddback(t_list **list, t_list *elem);
+t_list	*ft_lstlast(t_list *list);
 
 #endif // !CUB3D_H
