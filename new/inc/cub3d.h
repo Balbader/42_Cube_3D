@@ -57,6 +57,11 @@ void	ft_free_array(char **arr);
 void	ft_free_mlx(t_mlx *mlx);
 void	ft_free_texture(t_mlx *mlx);
 
+/*********************************************************************** init */
+void	ft_find_player_pos(char **tmp, t_mlx *mlx);
+void	ft_init_player(t_mlx *mlx, int *pos);
+bool	ft_is_player(char c, double *angle);
+
 /************************************************************************ mlx */
 int		ft_close(t_mlx *mlx);
 int		ft_key_hook(int key, t_mlx *mlx);
