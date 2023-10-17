@@ -45,11 +45,8 @@ static void	__init1(int err[2], int const dist[2], int c[2], int const a[2])
 void	ft_mlx_print_line(t_mlx *mlx, int const a[2], int const b[2], \
 		int const color)
 {
-	int	dist[2];
-	int	ori[2];
-	int	c[2];
-	int	err[2];
-
+	int dist[2], \
+ori[2], c[2], err[2];
 	__init0(dist, ori, a, b);
 	__init1(err, dist, c, a);
 	while (42)
