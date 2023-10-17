@@ -20,7 +20,7 @@ int	ft_xpm_file_and_addr(void *mlx_ptr, t_img *img)
 	img->img = mlx_new_image(mlx_ptr, WIDTH, HEIGHT);
 	if (!img->img)
 		return (EXIT_FAILURE);
-	img->addr = (int *)mlx_get_data_addr(img->img, &img->bits_per_pixel,
+	img->addr = (int *)mlx_get_data_addr(img->img, &img->bits_per_pixel, \
 			&img->line_length, &img->endian);
 	img->width = WIDTH;
 	img->height = HEIGHT;
