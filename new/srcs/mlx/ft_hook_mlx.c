@@ -101,7 +101,7 @@ int	ft_key_hook(int key, t_mlx *mlx)
 
 int	ft_close(t_mlx *mlx)
 {
-	(void)mlx;
+	ft_free_mlx(mlx);
 	exit(0);
 	return (0);
 }
