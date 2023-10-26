@@ -1,8 +1,7 @@
-
-NO /mnt/nfs/homes/grannou/Cub3DMinusCortex/textures_solong/Kyubie42.xpm
-SO /mnt/nfs/homes/grannou/Cub3DMinusCortex/textures_solong/Sakura42.xpm
-WE /mnt/nfs/homes/grannou/Cub3DMinusCortex/textures_solong/Tori42.xpm
-EA /mnt/nfs/homes/grannou/Cub3DMinusCortex/textures_solong/East42.xpm
+NO ./text_1/wood.xpm
+SO ./text_1/purplestone.xpm
+WE ./text_1/pillar.xpm
+EA ./text_1/wall_2.xpm
 
 F 220  ,100  , 0
 C 225 ,  30  , 0

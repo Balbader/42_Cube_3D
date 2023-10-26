@@ -1,8 +1,7 @@
-
-NO ../CUB3D/textures_solong/Kyubie42.xpm
-SO ../CUB3D/textures_solong/Sakura42.xpm
-WE ../CUB3D/textures_solong/Tori42.xpm
-EA ../CUB3D/textures_solong/Tree42.xpm
+NO ./text_1/wood.xpm
+SO ./text_1/purplestone.xpm
+WE ./text_1/pillar.xpm
+EA ./text_1/wall_2.xpm
 
 F 220  ,100  , 0
 C 225 ,  30  , 0

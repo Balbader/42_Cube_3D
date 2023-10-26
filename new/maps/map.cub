@@ -1,8 +1,7 @@
-
-NO ./textures/Kyubie42.xpm
-SO ./textures/Sakura42.xpm
-WE ./textures/Tori42.xpm
-EA ./textures/Tree42.xpm
+NO ./text_1/wood.xpm
+SO ./text_1/purplestone.xpm
+WE ./text_1/pillar.xpm
+EA ./text_1/wall_2.xpm
 
 F 0  , 255 , 0
 C 0 , 0 , 200

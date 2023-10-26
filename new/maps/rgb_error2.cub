@@ -1,7 +1,7 @@
-NO ./path_to_the_north_texture
-SO ./path_to_the_south_texture
-WE ./path_to_the_west_texture
-EA ./path_to_the_east_texture
+NO ./text_1/wood.xpm
+SO ./text_1/purplestone.xpm
+WE ./text_1/pillar.xpm
+EA ./text_1/wall_2.xpm
 
 F 220  ,100  , 0
 C 225 ,  3h0  , 0
