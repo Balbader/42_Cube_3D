@@ -18,24 +18,24 @@ double	ft_vertical_check(t_mlx *mlx, double ra, double end_pos[2])
 {
 	double	rayon[2];
 	double	offset[2];
-	double	ntan;
+	double	neg_tan;
 
-	ntan = -tan(ra);
+	neg_tan = -tan(ra);
 	if ((M_PI / 2) < ra && ra < (3 * M_PI / 2))
 	{
 		rayon[X] = (((int)mlx->player[X_PIXEL] >> 6) << 6) + 64;
-		rayon[1] = (mlx->player[X_PIXEL] - rayon[X]) * ntan;
+		rayon[1] = (mlx->player[X_PIXEL] - rayon[X]) * neg_tan;
 		rayon[1] += mlx->player[Y_PIXEL];
 		offset[X] = 64;
-		offset[1] = -offset[X] * ntan;
+		offset[1] = -offset[X] * neg_tan;
 	}
 	if (ra < (M_PI / 2) || (3 * M_PI / 2) < ra)
 	{
 		rayon[X] = (((int)mlx->player[X_PIXEL] >> 6) << 6) - 0.0002;
-		rayon[1] = (mlx->player[X_PIXEL] - rayon[X]) * ntan;
+		rayon[1] = (mlx->player[X_PIXEL] - rayon[X]) * neg_tan;
 		rayon[1] += mlx->player[Y_PIXEL];
 		offset[X] = -64;
-		offset[1] = -offset[X] * ntan;
+		offset[1] = -offset[X] * neg_tan;
 	}
 	if (ra == (M_PI / 2) || ra == (3 * M_PI / 2))
 		return (1000000);
