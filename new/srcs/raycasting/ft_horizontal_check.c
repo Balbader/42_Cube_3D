@@ -13,13 +13,24 @@
 #include "cub3d.h"
 
 /*
+ * This function is used to check the path of the ray and its relative offset.
+ *
  * M_PI : Pi macro
  * tan : <math.h> function : returns the tangent of a number (angle in radians).
+ * atan : returns the value of the given argument in radians.
  *
- * 1. Define the radiand value of ra : atan
- * 2. check if ra < Pi || ra > Pi 
- * 		if < Pi
- * 			
+ * 1. Define the radian value of ra : atan
+ * 2. check if ra < Pi
+ * 		. cast the mlx->player attribute to an (int)
+ * 		. shift the player Y_PIXEL to the right by 6
+ * 		. shift the player Y_PIXEL to the left by 6
+ * 		. substract the player Y_PIXEL by 0.0002
+ * 3. 
+ * 2. check if ra > Pi
+ * 		. cast the mlx->player attribute to an (int)
+ * 		. shift the player Y_PIXEL to the right by 6
+ * 		. shift the player Y_PIXEL to the left by 6
+ * 		. add 64 to the player Y_PIXEL
 */
 
 #define X 0
