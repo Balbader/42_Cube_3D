@@ -18,6 +18,8 @@
  *
  * 1. Define the radiand value of ra : atan
  * 2. check if ra < Pi || ra > Pi 
+ * 		if < Pi
+ * 			
 */
 
 #define X 0
