@@ -13,7 +13,7 @@
 #include "cub3d.h"
 
 /*
- * Check West & East views.l
+ * Check West & East views.
  *
  * Check the path of the ray and its relative offset.
  *
