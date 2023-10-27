@@ -13,7 +13,9 @@
 #include "cub3d.h"
 
 /*
- * This function is used to check the path of the ray and its relative offset.
+ * Check West & East views.l
+ *
+ * Check the path of the ray and its relative offset.
  *
  * M_PI : Pi macro
  * tan : <math.h> function : returns the tangent of a number (angle in radians).
