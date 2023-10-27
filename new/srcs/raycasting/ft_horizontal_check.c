@@ -12,6 +12,14 @@
 
 #include "cub3d.h"
 
+/*
+ * M_PI : Pi macro
+ * tan : <math.h> function : returns the tangent of a number (angle in radians).
+ *
+ * 1. Define the radiand value of ra : atan
+ * 2. check if ra < Pi || ra > Pi 
+*/
+
 #define X 0
 
 double	ft_horizontal_check(t_mlx *mlx, double ra, double end_pos[2])
