@@ -32,6 +32,11 @@ void	ft_fill_rgb(t_data **data, t_list **list, int *dst, char *src)
 					ft_clear_all_exit(data, list, CEILINGFAIL);
 			}
 			*dst = ft_get_hexa_rgb_values(data, list, &to_split);
+			if (*dst == -1)
+			{
+				free(to_split);
+				ft_clear_all_exit(data, list, SPACEFAIL);
+			}
 			free(to_split);
 		}
 		tmp = tmp->next;

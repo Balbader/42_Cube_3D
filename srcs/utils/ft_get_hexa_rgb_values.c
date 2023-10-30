@@ -12,12 +12,30 @@
 
 #include "cub3d.h"
 
+static int ft_check_rgb_format(char *str)
+{
+	int		i;
+
+	i = 0;
+	while (!ft_isdigit(str[i]))
+		++i;
+	str += i;
+	if (ft_strchr(str, ' ') != 0)
+		return (1);
+	return (0);
+}
+
 int	ft_get_hexa_rgb_values(t_data **data, t_list **list, char **str)
 {
 	char	**array;
 	int		rgb[3];
 	int		hexa_color;
 
+	if (ft_check_rgb_format(*str) == 1)
+	{
+		printf("Shit is going down right here!\n");
+		return (-1);
+	}
 	ft_bzero_int_tab(rgb, 3, 0);
 	hexa_color = 0;
 	array = ft_split(data, list, *str, ',');
