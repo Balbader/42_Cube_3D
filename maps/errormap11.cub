@@ -3,7 +3,7 @@ SO ./textures/sprite_2.xpm
 WE ./textures/sprite_3.xpm
 EA ./textures/bluestone.xpm
 
-F 220  ,   100   ,  0  200
+F 220,   100   ,  0  200
 C 255 ,0,0
 
 1111111111111111111111111
