@@ -42,5 +42,4 @@ void	ft_parsing(int ac, char **av, t_data **data)
 	ft_check_open_textures(data);
 	ft_check_player_count(data);
 	ft_check_closed_map(data);
-	ft_print_data(*data);
 }
