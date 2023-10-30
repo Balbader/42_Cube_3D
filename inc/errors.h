@@ -59,6 +59,7 @@
 # define CEILINGFAIL "Data Ceiling RGB Malloc fail\n"
 # define SUBTRIMFAIL "Sub trim Malloc fail\n"
 # define COMASFAIL "Split RGB on comas Malloc fail\n"
+# define SPACEFAIL "Wrong RGB Format, found unauthorized space\n"
 # define MISSRGB "Missing RGB value, three needed\n"
 # define TMRGB "Too much RGB values, three needed\n"
 # define BIGRGB "RGB value too big\n"
