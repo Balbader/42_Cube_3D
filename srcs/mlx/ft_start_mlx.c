@@ -57,6 +57,33 @@ void	ft_choose_h_or_v(t_rayon *rayon, double dist[2], double end_pos[2][2])
 	}
 }
 
+void	ft_print_min_map(t_mlx *mlx)
+{
+	int		x;
+	int		r;
+	float	ra;
+	double	dist[2];
+	double	end_pos[2][2];
+
+	x = ((r = 0, 0));
+	ra = mlx->player[ANGLE] - ((1 * M_PI / 180) * 30);
+	while (r < WIDTH)
+	{
+		if (ra < 0)
+			ra += (2 * M_PI);
+		else if (ra > 2 * M_PI)
+			ra -= (2 * M_PI);
+		dist[H] = ft_horizontal_check(mlx, ra, end_pos[H]);
+		dist[V] = ft_vertical_check(mlx, ra, end_pos[V]);
+		mlx->rayon[r].angle = ra;
+		ft_choose_h_or_v(&mlx->rayon[r], dist, end_pos);
+		ft_print_3d(mlx, &mlx->rayon[r], ra, &x);
+		r += ((ra += (60 * M_PI / 180) / WIDTH, 1));
+	}
+	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win_ptr,
+		mlx->pict[IMAGE].img, 0, 0);
+}
+
 void	ft_start_mlx(t_data *data)
 {
 	t_mlx	mlx;

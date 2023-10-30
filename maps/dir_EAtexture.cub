@@ -1,7 +1,7 @@
-EA ./text_1/wall_3.xpm
-SO ./text_1/wall_2.xpm
-WE ./text_1/eagle.xpm
-NO ./text_1/wall_4.xpm
+EA ./textures/wall_3.xpm
+SO ./textures/wall_2.xpm
+WE ./textures/eagle.xpm
+NO ./textures/wall_4.xpm
 
 F 220  ,100  , 0
 C 225 ,  30  , 0

@@ -1,7 +1,7 @@
-NO ./text_1/purplestone.xpm
-WE ./text_1/panorama4.xpm
-SO ./text_1/pillar.xpm
-EA ./text_1/wood.xpm
+NO ./textures/purplestone.xpm
+WE ./textures/panorama4.xpm
+SO ./textures/pillar.xpm
+EA ./textures/wood.xpm
 
 F 220  ,100  , 0
 C 225 ,  30  , 0

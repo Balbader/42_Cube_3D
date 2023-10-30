@@ -171,7 +171,6 @@ UTILS_FILES			:=	\
 						ft_print_data.c \
 						ft_print_exit_error.c \
 						ft_print_list.c \
-						ft_print_map.c \
 						ft_set_line_type.c \
 						ft_sub_trim_str.c \
 						ft_ternary.c
