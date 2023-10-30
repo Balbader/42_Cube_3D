@@ -23,7 +23,11 @@ void	ft_check_first_last_char(t_data **data)
 	width = (*data)->map_width;
 	while (y < (*data)->map_height - 1)
 	{
-		if (map[y][0] == '0' || map[y][width - 1] == '0')
+		if ((map[y][0] == '0' || map[y][width - 1] == '0') || \
+			(map[y][0] == 'N' || map[y][width - 1] == 'N') || \
+			(map[y][0] == 'S' || map[y][width - 1] == 'S') || \
+			(map[y][0] == 'E' || map[y][width - 1] == 'E') || \
+			(map[y][0] == 'W' || map[y][width - 1] == 'W'))
 			ft_clear_data_nclosedmap_exit(data, y, NCLOSEDMAP);
 		y++;
 	}
